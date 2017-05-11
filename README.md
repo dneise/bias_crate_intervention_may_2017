@@ -37,9 +37,15 @@ Remove the little HV-Channel-board in channel number 4. The channel is indicated
 an arrow on the paper. The little HV-Channel-board should have the number "#354"
 on its backside written with magic marker.
 
+**Note:** Take care not to change the little blue potis setting, i.e. take care not to touch the little screw on top.
+
 ### Step 2: Find little HV-Channel-board #266
 
- * Find the box labeled "32 HV channels" on the upper left shelf near the window.
+ * Find the box labeled "32 HV Modules" on the upper left shelf near the window, see also the image below:
+
+![white cardboard box on the upper left shelf](box_location_small.jpg)
+
+
  * Find the HV-channel labeled "#266" within that box. It it labeled "broken", but this might have been a mistake, #266 might in fact be working fine.
 
 ![Finding HV channel #266](2.jpg)
@@ -76,6 +82,12 @@ Now comes the hard part. We see an over current (OC) in channel 27. This means t
 
 So first we try replacing the little HV-channel-board in channel 27.
 
+Of course we need again some **Preparations:**
+
+ * Switch off the bias crate and
+ * Switch off the 80V Agilent Power supply and
+ * remove the Bias "Motherboard" labeled `BIAS_2`
+
 ### Step 1: Locate Channel 27
 
 On the other side of the motherboard there is a channel 27 as indicated in this image.
@@ -91,7 +103,8 @@ In case #266 was broken and #354 is now in channel 4. You will need another litt
 
 ![the little board in channel 27 was just removed](5.jpg)
 
-Please note its backside label for later reference. We do not know it.
+This (probably broken) little HV-channel-board should be labeled #242. But anyway please note its backside label for later reference.
+
 
 ### Step 3: Plug #354 into the now empty channel 27
 
@@ -144,11 +157,17 @@ Then make sure you set the Board address of this new motherboard to 2, just like
 
  * Ask a FACT person to check if there is now an over current (OC) in the channel 27
 of board 2.
-    * If no OC in channel 27 .. all good. We have confirmed that the original motherboard `BIAS_2` had a short in channel 27 and the new board has not. That's good. Now all we need to do, is plug out the original little HV-channels from the old motherboard `BIAS_2` and put it into the new motherboard. One by one and without mixing them up.
+    * If no OC in channel 27 .. all good. We have confirmed that the original motherboard `BIAS_2` had a short in channel 27 and the new board has not. That's good. Now all we need to do, is plug out the original little HV-channels from the old motherboard `BIAS_2` and put it into the new motherboard. One by one and while making sure each little HV-channel-board has in the new motherboard the same position as in the old motherboard.
 
     * Else:
     There is still an OC in channel 27, but the little HV-channel-board was not the reason. And also the motherboard was not the reason. So this means the shortcut is inside the camera, which we cannot solve.
+    In this case we cannot repair channel 27. All you need to do now, is plug the `BIAS_2` board back into the crate.
 
 
+# Finishing up:
 
+At this point we might want to discuss the next steps on the phone and update this document later.
+It might be that you just put #266 back into channel 4 and channel 27 cannot be repaired. Then nothing needs to be done.
+It might be, that #266 was broken and #354 is now sitting in channel 4 and in addition you were able to repair channel 27 by putting a new little HV-channel-board into this channel. In that case we have two new HV-channel-boards on that motherboard.
+These need to be calibrated with the nice high resolution mutlimeter, which is going to be explained in a different document.
 
