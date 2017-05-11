@@ -7,14 +7,6 @@ immediately in that night went unfortunately wrong.
 This document tries to describe how to revert the "wrong repair" and possibly
 perform the "right" repair in a couple of steps.
 
-Short summary of tasks, detailed descriptions can be found below
-
-This all refers to the **Motherboard `BIAS_2`**.
-
- 1. Swap HV-channel-board in Channel 4 (#354 -> #266)
- 2. Replace HV-channel-board in Channel 27
-
-
 
 ## Preparations
 
@@ -24,6 +16,7 @@ This all refers to the **Motherboard `BIAS_2`**.
 
 ![the bias crate](0.jpg)
 
+\newpage
 
 ## Swap HV-channel-board in Channel 4 (#354 -> #266)
 
@@ -39,6 +32,8 @@ on its backside written with magic marker.
 
 **Note:** Take care not to change the little blue potis setting, i.e. take care not to touch the little screw on top.
 
+\newpage
+
 ### Step 2: Find little HV-Channel-board #266
 
  * Find the box labeled "32 HV Modules" on the upper left shelf near the window, see also the image below:
@@ -46,9 +41,9 @@ on its backside written with magic marker.
 ![white cardboard box on the upper left shelf](box_location_small.jpg)
 
 
- * Find the HV-channel labeled "#266" within that box. It it labeled "broken", but this might have been a mistake, #266 might in fact be working fine.
+ * Find the HV-channel labeled "#266" within that box. It is labeled "broken", but this might have been a mistake, #266 might in fact be working fine.
 
-![Finding HV channel #266](2.jpg)
+\newpage
 
 ### Step 3: Insert the little HV-Channel-board #266 into channel 4 of the motherboard.
 
@@ -70,7 +65,7 @@ of board 2.
     * Else:
     You have confirmed that #266 is really broken. This means we would have to ask to to revert the last 4 steps and put the #354 back into the channel 4.
 
-----
+\newpage
 
 ## Replace HV-channel-board in Channel 27 of `BIAS_2`
 
@@ -105,6 +100,7 @@ In case #266 was broken and #354 is now in channel 4. You will need another litt
 
 This (probably broken) little HV-channel-board should be labeled #242. But anyway please note its backside label for later reference.
 
+\newpage
 
 ### Step 3: Plug #354 into the now empty channel 27
 
@@ -126,6 +122,9 @@ of board 2.
     * Else:
     There is still an OC in channel 27, but the little HV-channel-board was not the reason. In this case please go on below.
 
+----
+
+\newpage
 ## Replace the complete motherboard `BIAS_2`
 
 ### Step 1:
@@ -138,7 +137,6 @@ of board 2.
 ### Step 2: prepare the new motherboard
 
 In principle you would have to put all 32 little HV-boards now into the 32 channels, but for a quick test this is not needed.
-
 We just want to know how channel 27 is doing, the rest are fine.
 So please just plug a single little HV-channel into the correct position for channel 27.
 
@@ -146,6 +144,7 @@ Then make sure you set the Board address of this new motherboard to 2, just like
 
 ![dip switch set to address 2](board_address_small.jpg)
 
+\newpage
 ### Step 3: Insert the new motherboard
 
  * Insert the new Motherboard into the crate and switch it on.
